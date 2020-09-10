@@ -10,6 +10,7 @@ const Header = () => {
         <a href="#/about">About</a>
       </div>
     </div>
+    <hr>
   `
   return view
 }
