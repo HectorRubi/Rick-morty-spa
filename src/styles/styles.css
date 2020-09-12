@@ -3,9 +3,23 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #08b1c9;
   color: #3c484e;
   font-family: 'Open Sans', sans-serif;
+}
+
+.Header {
+  background: #000000;
+  padding: 5px 10px;
+}
+
+.Header a {
+  text-decoration: none;
+  color: #f3f3f3;
+  transition: color 0.5s ease;
+}
+.Header a:hover {
+  color: #08b1c9;
 }
 
 .Header-main {
@@ -14,16 +28,8 @@ body {
   align-items: center;
 }
 
-.Header a {
-  text-decoration: none;
-  color: #15302C;
-}
-
-.Main {
-  padding: 10px;
-  grid-template-columns: minmax(auto, 976px);
-  display: grid;
-  justify-content: center;
+.Header-logo img {
+  height: 60px;
 }
 
 .Characters {
