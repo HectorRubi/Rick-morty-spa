@@ -9,6 +9,8 @@ body {
 }
 
 .Header {
+  position: relative;
+  z-index: 2;
   background: #000000;
   padding: 5px 10px;
 }
@@ -33,10 +35,12 @@ body {
 }
 
 .Characters {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .Characters-inner {
@@ -77,12 +81,25 @@ body {
 
 .Characters-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  box-shadow: 1px 1px 10px 2px #999999;
   border-radius: 5px;
   margin: 0 0 20px 0;
   display: block;
+  background-color: #f3f3f3;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+  animation-delay: 0.5s;
   animation-duration: 2s;
   animation-name: fade;
+  animation-fill-mode: backwards;
+}
+
+.Characters:hover .Characters-item{
+  opacity: 0.8;
+}
+
+.Characters:hover .Characters-item:hover{
+  opacity: 1;
+  box-shadow: 1px 1px 20px 4px #444444;
 }
 
 .Characters-item img {
@@ -92,11 +109,16 @@ body {
 }
 
 .Characters-item h2 {
-  font-size: 18px;
-  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
   padding: 5px 10px;
-  display: flex;
-  justify-content: space-between;
+  transition: color 0.5s ease;
+}
+
+.Characters-item:hover h2 {
+  color: #026C86;
 }
 
 .Characters-item a {
