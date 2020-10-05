@@ -5,6 +5,7 @@ class Router {
     this.routes = routes
     this.header = null || document.getElementById('header')
     this.content = null || document.querySelectorAll('[data-router]')[0]
+    this.links = null || document.getElementsByClassName('link')
   }
 
   async loadRoute(...urlSegs) {
@@ -41,6 +42,10 @@ class Router {
 
   async loadTemplates() {
     this.header.innerHTML = await Header();
+  }
+
+  addLinksListener() {
+    console.log(this.links)
   }
 }
 
