@@ -1,4 +1,8 @@
-import router from './routes/index'
+import Routes from './routes/routes'
+import Router from "./routes/router";
 
-window.addEventListener('load', router)
-window.addEventListener('hashchange', router)
+const router = new Router(Routes)
+
+window.addEventListener('load', (ev) => {
+  router.loadInitialRoute()
+})
