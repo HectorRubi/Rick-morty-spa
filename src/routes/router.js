@@ -20,8 +20,14 @@ class Router {
   _matchUrlRoute(urlSegs) {
     let matchedRoute = this.routes.find(route => {
       const routePathSegs = route.path.split('/').slice(1)
+
       if (routePathSegs.length !== urlSegs.length) {
         return false
+      }
+      if (parseInt(urlSegs[0]) !== NaN) {
+        if (routePathSegs[0] === ':id') {
+          return true
+        }
       }
       return routePathSegs.every((routePathSeg, i) => routePathSeg === urlSegs[i])
     })
@@ -42,10 +48,6 @@ class Router {
 
   async loadTemplates() {
     this.header.innerHTML = await Header();
-  }
-
-  addLinksListener() {
-    console.log(this.links)
   }
 }
 
