@@ -158,3 +158,20 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+.about__images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__images img{
+  display: block;
+  object-fit: cover;
+}
