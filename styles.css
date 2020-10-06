@@ -52,10 +52,13 @@ body {
 
 .Characters-card {
   text-decoration: none;
+  background-color: white;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
   margin: 0 0 20px 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   animation-duration: 2s;
   animation-name: fade;
 }
@@ -67,16 +70,23 @@ body {
 }
 
 .Characters-card h2 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: bold;
   text-align: center;
 }
 
 .Characters-card h3 {
   font-size: 18px;
   font-weight: 400;
-  text-align: left;
-  margin: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  border-radius: 5px;
+  transition: color 300ms ease, background 0.5s ease;
+}
+.Characters-card h3:hover {
+  background-color: #c8dd5d;
+  color: white;
 }
 
 .Characters-item {
@@ -147,4 +157,21 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+.about__images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__images img{
+  display: block;
+  object-fit: cover;
 }
